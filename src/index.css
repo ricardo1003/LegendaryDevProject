@@ -1,1 +1,6 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+@theme {
+  --color-custom-purple-4: "hsl(283,71%,20%)"; /* #420e58 */
+  --color-custom-purple-5: "hsl(283,71%,10%)"; /*#21072c*/
+}
