@@ -7,7 +7,7 @@ function App() {
   return (
     <div className="min-h-[100vh] bg-cover text-white flex flex-col" style={{backgroundImage:"url(https://4kwallpapers.com/images/walls/thumbs_3t/2562.jpg)"}}>
       <div className="background bg-[hsl(282,73%,5%)] block absolute w-[100vw] h-[100vh] z-[1] opacity-95"/>
-      <div className="background from-white/10 bg-gradient-to-t block absolute bottom-0 w-[100vw] h-[25vh] z-[1] opacity-95"/>
+      <div className="background from-[hsla(282,73%,70%,0.2)] bg-gradient-to-t block absolute bottom-0 w-[100vw] h-[25vh] z-[1] opacity-95"/>
       <header className=" flex items-center fixed w-full backdrop:blur-2xl px-16 gap-2 h-22 border-white/50 border-b-1 bg-custom-purple-4 z-10">
         <picture>
           <img src="#" alt="logo" />
