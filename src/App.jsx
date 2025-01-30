@@ -1,9 +1,35 @@
 import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
+import ControlPanel from './components/ControlPanel'
 import "./App.css";
 
 function App() {
+  const [graphValues, setGraphValues] = useState([
+    {
+      posX: 0,
+      posY: 0,
+    },
+    {
+      posX: 0,
+      posY: 0,
+    },
+    {
+      posX: 0,
+      posY: 0,
+    },
+  ]);
+
+  for (let i = 0; i < graphValues.length; i++) {
+    let newGraphValues = [
+      {
+        posX: `${(100 / (graphValues.length-1)) * i}%`,
+        posY: 0,
+      },
+    ];
+    console.log(newGraphValues);
+  }
+
   return (
     <div
       className="min-h-[100vh] bg-cover text-white flex flex-col font-Montserrat"
@@ -46,11 +72,10 @@ function App() {
       </header>
       <main className="flex items-center justify-center h-[100vh] pt-22 gap-15 z-10">
         <section className="w-75 flex flex-col gap-4">
-          <h1 className="text-6xl font-bold capitalize">
-            Nigga Traders
-          </h1>
+          <h1 className="text-6xl font-bold capitalize">Nigga Traders</h1>
           <p className="text-white/75">
-            The best investing website for the best of the unemployed nigerians. Are you ready to NiggaTrade?{" "}
+            The best investing website for the best of the unemployed nigerians.
+            Are you ready to NiggaTrade?{" "}
           </p>
           <div className="flex justify-between gap-3 px-1 text-[hsl(282,73%,99%)]">
             <button className="from-[#2af5ff] to-[#3066be] bg-gradient-to-br rounded-md px-4 py-2 font-medium">
@@ -63,21 +88,53 @@ function App() {
         </section>
         <section className="max-w-150 flex">
           <div className="flex flex-col justify-end">
-            <p className="text-white/50 flex flex-col"><b className="text-[hsl(356,92%,53%)] text-2xl drop-shadow-[0_0px_3px_hsla(356,92%,53%,1)] ">+136%</b> niggers investing</p>
-            <picture><img src="https://i.ytimg.com/vi/kkBgqTXLgTw/maxresdefault.jpg"
-              alt="investiment" /></picture>
+            <p className="text-white/50 flex flex-col">
+              <b className="text-[hsl(356,92%,53%)] text-2xl drop-shadow-[0_0px_3px_hsla(356,92%,53%,1)] ">
+                +136%
+              </b>{" "}
+              niggers investing
+            </p>
+            <picture
+              style={{
+                backgroundColor: "#d80e0e",
+              }}
+            >
+              <img
+                src="https://i.ytimg.com/vi/kkBgqTXLgTw/maxresdefault.jpg"
+                alt="investiment"
+              />
+            </picture>
           </div>
           <div className="flex flex-col">
-            <p className="text-white/50 flex flex-col"><b className="text-[hsl(148,98%,40%)] text-2xl drop-shadow-[0_0px_3px_hsla(148,98%,40%,1)]">+43%</b> gains worldwide</p>
-            <picture><img src="https://i.ytimg.com/vi/kkBgqTXLgTw/maxresdefault.jpg"
-              alt="investiment" /></picture>
+            <p className="text-white/50 flex flex-col">
+              <b className="text-[hsl(148,98%,40%)] text-2xl drop-shadow-[0_0px_3px_hsla(148,98%,40%,1)]">
+                +43%
+              </b>{" "}
+              gains worldwide
+            </p>
+            <picture>
+              <img
+                src="https://i.ytimg.com/vi/kkBgqTXLgTw/maxresdefault.jpg"
+                alt="investiment"
+              />
+            </picture>
           </div>
           <div className="flex flex-col justify-end">
-            <p className="text-white/50 flex flex-col"><b className="text-[hsl(227,76%,55%)] text-2xl drop-shadow-[0_0px_3px_hsla(227,76%,55%,1)]">+69%</b> woah thats a big number</p>
-            <picture><img src="https://i.ytimg.com/vi/kkBgqTXLgTw/maxresdefault.jpg"
-              alt="investiment" /></picture>
+            <p className="text-white/50 flex flex-col">
+              <b className="text-[hsl(227,76%,55%)] text-2xl drop-shadow-[0_0px_3px_hsla(227,76%,55%,1)]">
+                +69%
+              </b>{" "}
+              woah thats a big number
+            </p>
+            <picture>
+              <img
+                src="https://i.ytimg.com/vi/kkBgqTXLgTw/maxresdefault.jpg"
+                alt="investiment"
+              />
+            </picture>
           </div>
         </section>
+        <ControlPanel></ControlPanel>
       </main>
     </div>
   );
